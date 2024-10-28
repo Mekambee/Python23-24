@@ -1,5 +1,5 @@
 import sys
-def factorize(number):
+def rozkład_na_czynniki(number):
     i = 2
     factors = []
     while i * i <= number:
@@ -12,7 +12,7 @@ def factorize(number):
         factors.append(number)
     return factors
 
-def format_output(factors):
+def formatuj_wynik(factors):
     if not factors:
         return ""
 
@@ -41,6 +41,6 @@ if __name__ == "__main__":
         numbers.append(number)
 
     for number in numbers:
-        factors = factorize(number)
-        formatted_output = format_output(factors)
+        factors = rozkład_na_czynniki(number)
+        formatted_output = formatuj_wynik(factors)
         print(f"{number} = {formatted_output}")
